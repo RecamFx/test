@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --letra: black;
+    --blanco: white;
+
+    --Sombra: rgba(0, 0, 0, 0.12);
+
+    --semiNegro: rgb(54, 54, 54);
+
+    --verdecito: #00a650;
+
+    --semiBlanco: rgb(241, 241, 241);
+    
+    --gris: rgb(227, 227, 227);
+    --grisClaro: rgb(248, 248, 248);
+    --grisOscuro: rgb(177, 177, 177);
+
+    --rojo: rgb(255, 0, 0);
+    --rojoOscuro: rgb(236, 0, 0);
+
+    --headerHEIGHT: 60px;
+}
+
+body{
+    background-color: var(--grisClaro);
+}
+
+/* --------------------------------MAIN-------------------------------- */
+/* --------------------------------MAIN-------------------------------- */
+/* --------------------------------MAIN-------------------------------- */
+/* --------------------------------MAIN-------------------------------- */
+/* --------------------------------MAIN-------------------------------- */
+
+
+main{
+    padding-top: calc(var(--headerHEIGHT) + 2vh);
+
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.pagina {
+    display: flex;
+    width: 90%;
+}
+
+.divLeft ul {
+    padding: 0;
+}
+
+.divLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+}
+
+.divLeft .mobileBar {
+    display: none;
+}
+
+.divLeft a {
+    text-decoration: none;
+    color: var(--semiNegro);
+}
+
+.divLeft div ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.divLeft div ul li a{
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.divLeft div ul li a:hover{
+    transition: 0.1s;
+    color: var(--rojo);
+}
+
+.divLeft div h3{
+    font-size: 20px;
+    margin: 0 0 3px 0;
+}
+
+.divLeft .precio ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.divLeft .precio ul li {
+    padding: 3px 7px;
+    border: 1px solid var(--Sombra);
+    background-color: var(--semiBlanco);
+    border-radius: 10px;
+    margin: 0.5px;
+}
+
+.divLeft .precio ul input{
+    width: 100%;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.divLeft .precio ul li:focus-within{
+    border: 2px solid var(--rojo);
+    margin: 0;
+}
+
+.divRight .ordenar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 20px;
+    margin: 10px 0;
+}
+
+.divRight .ordenar select {
+    outline: none;
+    border: 0;
+    transition: 0.2s;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.divRight .ordenar select:hover {
+    border: none;
+}
+
+.divRight .ordenar select::after{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.divRight .ordenar p {
+    margin: 0 7px 0 0;
+}
+
+.divRight .productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.divRight .productos .items {
+    background-color: var(--blanco);
+    box-shadow: 0 1px 2px 0 var(--Sombra);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+    
+.divRight .productos .items:hover {
+    box-shadow: 0 3px 10px 0 var(--Sombra);
+    cursor: pointer ;
+}
+
+.divRight .productos .items .itemTop img{
+    padding: 10px;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.divRight .productos .items:hover img {
+    width: 103%;
+}
+
+.divRight .productos .items .itemTop {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 2px solid var(--grisClaro);
+}
+
+.divRight .productos .items .itemBot{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.divRight .productos .items .itemBot p{
+    margin: 2px;
+}
+
+.divRight .productos .items .itemBot h3{
+    font-weight: 500;
+    font-size: 25px;
+    margin: 0;
+}
+
+.divRight .productos .items .itemBot .cuotas{
+    color: var(--verdecito);
+}
+
+@media (max-width: 1024px) {
+    .divRight .productos{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 80vw;
+        height: 20vh;
+    }
+    .divRight .productos .items {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+    .divRight .productos .items img{
+        height: 20vh;
+        object-fit: cover;
+    }
+    .divRight .productos .items .itemTop {
+        height: 25vh;
+    }
+    .divLeft {
+        width: 0;
+    }
+    .divLeft .precio,
+    .divLeft .categorias,
+    .divLeft .edades,
+    .divLeft .marcas {
+        display: none;
+    }
+    .divLeft .mobileBar {
+        display: flex;
+        position: absolute;
+        left: 10vw;
+        top: calc(var(--headerHEIGHT) + 3vh);
+    }
+    .divLeft:hover .categorias,
+    .divLeft:hover .precio,
+    .divLeft:hover .edades,
+    .divLeft:hover .marcas{
+        display: block;
+    }
+    .divLeft:hover .mobileBar {
+        display: none;
+    }
+    .divLeft:hover {
+        padding: 40px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: calc(60px);
+        left: 0;
+        height: 100%;
+        width: 30vw;
+        background-color: var(--blanco);
+        border-right: 2px solid var(--grisClaro);
+        min-width: 300px;
+        box-shadow: 2px 0 2px 0 rgba(0,0,0,.12);
+    }
+    .pagina {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --negro: black;
+    --blanco: white;
+
+    --Sombra: rgba(0, 0, 0, 0.12);
+
+    --grisNormal: rgb(227, 227, 227);
+    --grisClaro: rgb(244, 244, 244);
+    --grisOscuro: rgb(177, 177, 177);
+
+    --rojo: rgb(253, 0, 0);
+    --rojoOscuro: rgb(236, 0, 0);
+
+    --azul: rgb(26, 125, 211);
+
+    --negroClaro: rgb(24, 24, 24);
+
+    --fFamily: "Roboto", sans-serif;
+    --fWeight: 400;
+    --fStyle: normal;
+
+    --maxWITH: 1440px;
+
+    --headerHEIGHT: 60px;
+    --carouselMAXHEIGHT: 400px;
+}
+
+/* ---------------------------------------------- */
+/* HEADER */
+/* ---------------------------------------------- */
+
+.header {
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    background-color: var(--rojo);
+
+    position: fixed;
+    z-index: 20;
+}
+
+.maxWITH {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: var(--maxWITH);
+}
+/* 
+.topNAV {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    width: 100%;
+    height: 100px;
+    max-height: 70px;
+    padding: 15px;
+    
+}
+
+.topNAV img {
+    height: 100%;
+}
+
+
+.botNAV {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.botNAV a {
+    font-family: var(--fFamily);
+    color: var(--blanco);
+    text-decoration: none;
+
+}
+
+
+.searchbar {
+    height: 100%;
+    width: 60vw;
+    max-width: 900px;
+
+    border-radius: 6px;
+    background-color: var(--blanco);
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchbar input {
+    all: unset;
+
+    font-family: var(--fFamily);
+
+    height: 100%;
+    width: 90%;
+}
+
+.searchbar button{
+    all: unset;
+    padding: 10px;
+}
+
+.searchbar i {
+    color: var(--negro);
+    filter: opacity(80%);
+}
+
+.searchbar button:hover i {
+    filter: opacity(100%);
+}
+
+
+.iconsNAVBAR{
+    display: flex;
+    justify-content: end;
+    gap: 1vw;
+    width: 150px;
+}
+
+.iconsNAVBAR i{
+    font-size: 25px;
+    color: var(--blanco);
+}
+ */
+
+ 
+ /* topNAV */
+
+.topNAV {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    width: 100%;
+    height: 60px;
+    max-height: var(--headerHEIGHT);
+    
+}
+
+.topNAV img {
+    height: 100%;
+}
+
+.topNAV .imgNav {
+    width: 493px;
+}
+
+.midNav {
+    display: flex;
+    justify-content: center;
+
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.midNav .categ {
+    font-family: var(--fFamily);
+    color: var(--blanco);
+    text-decoration: none;
+    
+    height: 100%;
+
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.midNav .categ:hover {
+    border-bottom: 2px solid var(--blanco);
+}
+
+/* Right Nav */
+.rightNAV {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rightNAV i {
+    font-size: 25px;
+    color: var(--blanco);
+}
+
+/* seach bar */
+.searchbar {
+    height: 100%;
+    width: 60vw;
+    max-width: 200px;
+
+    border-radius: 100px;
+    background-color: var(--blanco);
+    
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.searchbar input {
+    all: unset;
+
+    font-family: var(--fFamily);
+
+    height: 100%;
+    width: 90%;
+    padding: 0 0 0 10%;
+}
+
+.searchbar button{
+    all: unset;
+}
+
+.searchbar i {
+    color: var(--negro);
+    filter: opacity(50%);
+    transition: 0.2s;
+    width: 100%;
+}
+
+.searchbar button:hover i {
+    filter: opacity(100%);
+}
+
+/* Padding Nav */
+.paddingNav {
+    height: 100%;
+    padding: 15px;
+}
+
+/* mobileRightNAV */
+.mobileRightNAV {
+    display: none;
+    color: var(--blanco);
+}
+
+.mobileRightNAV .bx-menu {
+    font-size: 30px;
+}
+
+/* Nino */
+.topNAV .nina,
+.topNAV .nino {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    
+    padding: 20px 0 40px 0;
+    width: 100vw;
+    
+    background-color: var(--rojo);
+    z-index: 10;
+    
+    /* transition: max-height 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0; */
+}
+
+.topNAV .nina div,
+.topNAV .nino div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    font-family: var(--fFamily);
+    color: var(--blanco);
+}
+.topNAV .nina h3,
+.topNAV .nino h3 {
+    margin: 0 0 10px 0;
+}
+
+.topNAV .nina div a,
+.topNAV .nino div a{
+    text-decoration: none;
+    color: var(--blanco);
+    filter: opacity(60%);
+    transition: 0.2s;
+}
+
+.topNAV .nina div a:hover,
+.topNAV .nino div a:hover{
+    filter: opacity(100%);
+}
+
+/* HOVERS MID NAV */
+
+.midNav .ninaHOVER:hover + .nina,
+.midNav .ninoHOVER:hover + .nino{ /* El + se usa si una etiqueta es adyacente a la otra */
+    display: flex;
+    /* max-height: 500px;
+    opacity: 1; */
+}
+
+.midNav .nina:hover,
+.midNav .nino:hover{
+    display: flex;
+    /* max-height: 500px;
+    opacity: 1; */
+}
+
+
+/* Media */
+@media (max-width: 768px) {
+    .midNav {
+        display: none;
+    }
+    .searchbar{
+        width: 40vw;
+    }
+    .rightNAV {
+        display: none;
+    }
+
+    .rightNAV a{
+        display: none;
+    }
+    .mobileRightNAV{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --negro: black;
+    --blanco: white;
+
+    --Sombra: rgba(0, 0, 0, 0.12);
+
+    --grisNormal: rgb(227, 227, 227);
+    --grisClaro: rgb(244, 244, 244);
+    --grisOscuro: rgb(177, 177, 177);
+
+    --rojo: rgb(253, 0, 0);
+    --rojoOscuro: rgb(236, 0, 0);
+
+    --azul: rgb(26, 125, 211);
+
+    --negroClaro: rgb(24, 24, 24);
+
+    --fFamily: "Roboto", sans-serif;
+    --fWeight: 400;
+    --fStyle: normal;
+
+    --maxWITH: 1440px;
+
+    --headerHEIGHT: 60px;
+    --carouselMAXHEIGHT: 400px;
+}
+
+/* ---------------------------------------------- */
+/* MAIN */
+/* ---------------------------------------------- */
+
+main {
+    width: 99vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--grisClaro);
+}
+.main {
+    height: 100%;
+    width: 100%;
+    max-width: var(--maxWITH);
+    display: flex;
+    flex-direction: column;
+    
+    margin: 30px 0 30px 0;
+    gap: 30px;
+}
+
+
+
+
+
+/* Carousel section */
+.carousel-container {
+    width: 100%;
+    max-height: var(--carouselMAXHEIGHT);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container .gradient {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0),var(--grisClaro));
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    /* height: 541.41px; Importantisimo */
+    height: auto; /*Importantisimo*/
+    display: flex;
+    justify-content: center;
+    max-height: var(--carouselMAXHEIGHT);
+}
+
+.carousel-item a {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100vw;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-controls button {
+    display: none;
+    padding: calc(var(--carouselMAXHEIGHT)/2 - 3vw/1.4996) 40px;
+    border: none;
+
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 2vw;
+    transition: opacity 0.2s;
+}
+
+.carousel-controls button:hover {
+    opacity: 1;
+}
+
+.prev {
+    position: absolute;
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.carousel-section {
+    width: 100%;
+    height: 100%;
+    margin-top: var(--headerHEIGHT);
+    background-color: var(--blanco);
+    max-height: var(--carouselMAXHEIGHT);
+}
+
+.carousel-section:hover button {
+    display: block;
+}
+
+@media (max-width: 1366px) {
+    .carousel-item {
+        height: auto;
+    }
+    .carousel-controls {
+        top: 5%;
+    }
+    .carousel-controls button {
+        padding: 15% 4vw;
+    }
+}
+
+
+/* Edades */
+.edades-section .edades {
+    display: flex;
+    justify-content: space-around;
+}
+
+.edad-contenedor {
+    max-height: 400px;
+    width: 25%;
+    border-radius: 15spx;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+}
+
+.edad-contenedor a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--negro);
+
+    background-color: var(--blanco);
+}
+
+.edad-contenedor h2 {
+    font-family: var(--fFamily);
+    font-style: var(--fStyle);
+    padding: 10px;
+}
+
+.edad-contenedor img {
+    height: 400px;
+    width: 100%;
+
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.edad-contenedor:hover img {
+    width: 107%;
+}
+
+
+
+
+/* ------------------------ */
+/* FOOTER */
+/* ------------------------ */
+footer .topFooter {
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+    gap: 5vh;
+    
+    /* background-color: var(--negroClaro); */
+    background-color: var(--rojo);
+}
+
+footer .topFooter div ul {
+    list-style: none;
+}
+
+footer .topFooter div {
+    color: var(--blanco);
+    font-family: var(--fFamily);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .topFooter p,
+footer .topFooter li{
+    filter: opacity(70%);
+}
+
+footer .topFooter li:hover{
+    filter: opacity(100%);
+    cursor: pointer;
+}
+
+footer .botFooter {   
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+
+    color: var(--blanco);
+
+    border-top: 1px solid var(--blanco);
+    /* background-color: var(--negroClaro); */
+    background-color: var(--rojo);
+}
+
+footer .botFooter p{
+    filter: opacity(80%);
+}
+
+footer .botFooter a{    
+    color: var(--blanco);
+    text-decoration: none;
+
+    filter: opacity(80%);
+    transition: 0.2s;
+}
+
+footer .botFooter a:hover{
+    filter: opacity(100%);
+}
+
+
+/* ----------------------- */
+/* OTROS */
+
+.pointer {
+    cursor: pointer;
+}
