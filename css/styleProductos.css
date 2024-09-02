@@ -171,12 +171,12 @@ main{
 
 .divRight .productos .items .itemTop img{
     padding: 10px;
-    width: 100%;
+    width: 90%;
     transition: 0.2s;
 }
 
 .divRight .productos .items:hover img {
-    width: 103%;
+    width: 100%;
 }
 
 .divRight .productos .items .itemTop {
